@@ -1,0 +1,91 @@
+@import "./unicorn-app-theme.scss";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  font-family: Montserrat;
+}
+
+body{
+  min-width: 400px;
+}
+
+.header-component-dialog .mat-dialog-container {
+  padding: 0;
+}
+
+.to-be-corrected {
+  color: orange;
+}
+
+.anchor {
+  color: blue;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  text-decoration: underline;
+}
+
+.header-less-tabs.mat-tab-group .mat-tab-header {
+  display: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+*:focus{
+  outline: none;
+}
+
+
+.home-component-dialog .mat-dialog-container {
+  padding: 0;
+}
+
+.home-component-dialog .mat-tab-group .mat-tab-header{
+  display: none;
+}
+
+
+.paragraph, .paragraph-form {
+  padding: 20px 20px;
+}
+
+.paragraph b{
+    padding-left: 0px;
+}
+
+.courses.mat-tab-label-content{
+  font-size: 2em;
+  margin: 1em;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.affix + .container {
+  padding-top: 70px;
+}
+
+.bottom-extender {
+  height: 5vh;
+}
+
+
+.module-parent{
+  margin-top: 6em;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgba(0,123,255, 0.7);
+}
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,123,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.module-parent{
+  min-height: 50vh;
+}

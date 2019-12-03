@@ -1,0 +1,50 @@
+<div class="container module-parent">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <div class="row">
+                <div class="col">
+                    <h1>11+</h1>
+                </div>
+                <div class="col d-block d-sm-none text-right">
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarCoursesCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>  
+            <hr>
+            <div class="row">
+                <div class="navbar courses-sidenav col-12 col-sm-5 col-md-4 col-lg-3">
+                    <div class=" h-100 navbar-expand-sm">
+                        <div class=" collapse navbar-collapse" id="navbarCoursesCollapse">
+                            <ul class="courses-sidenav-ul" >
+                                <li [class.bold]="contentIndex==1" [routerLink]="['/elevenplus/pre-elevenplus-year-four']"
+                                (click)="showContent(1)">Pre 11+ year 4</li>
+                            <li [class.bold]="contentIndex==2" [routerLink]="['/elevenplus/elevenplus-year-five']"
+                                (click)="showContent(2)">11+ year 5</li>
+                            <li [class.bold]="contentIndex==3" [routerLink]="['/elevenplus/independent-schools']"
+                                (click)="showContent(3)">Independent Schools</li>
+                            <li [class.bold]="contentIndex==4" [routerLink]="['/elevenplus/elevenplus-mock-tests']"
+                                (click)="showContent(4)">11+ Mock Tests</li>
+                            <li [class.bold]="contentIndex==5" [routerLink]="['/elevenplus/elevenplus-mock-test-faq']"
+                                (click)="showContent(5)">11+ Mock Tests FAQ</li>
+                            <li [class.bold]="contentIndex==6" [routerLink]="['/elevenplus/elevenplus-summer-course']"
+                                (click)="showContent(6)">11+ Summer Course</li>
+                            <li [class.bold]="contentIndex==7" [routerLink]="['/elevenplus/elevenplus-advice']"
+                                (click)="showContent(7)">11+ Advice</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+                    <div class="drawer-content">
+
+                        <router-outlet></router-outlet>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

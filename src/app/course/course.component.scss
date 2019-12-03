@@ -1,0 +1,68 @@
+.parent {
+    position: relative;
+  }
+  
+  .mat-tab-container {
+    height: 100%;
+  }
+  
+  .bottom-extender {
+    height: 50px;
+  }
+  
+  .mat-drawer-content {
+    background-color: white;
+  }
+  
+  h3, b{
+      padding-left: 20px;
+  }
+  
+  h3 {
+      margin-top:  20px;
+  }
+  
+  .paragraph, .paragraph-form {
+    padding: 20px 20px;
+  }
+  
+  .paragraph b{
+      padding-left: 0px;
+  }
+  
+  .hide{
+      display: none;
+  }
+  
+  .elevenplus-sidenav-ul {
+      list-style: none;
+      padding: 0px;
+      padding-right: 25px;
+  }
+  
+  .elevenplus-sidenav-ul li{
+      cursor: pointer;
+      padding: 5px 10px;
+  
+  }
+  
+  .elevenplus-sidenav-ul li:hover{
+      font-weight: bold;
+      border-left: 1px solid black;
+  }
+  
+  .elevenplus-mat-card {
+      padding-left: 0px;
+  }
+  
+  .drawer-content{
+      padding-left: 25px;
+  }
+  
+  li.bold {
+      font-weight: bold;
+  }
+  
+  td{
+      padding: 10px;
+  }

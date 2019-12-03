@@ -1,0 +1,48 @@
+<div class="container module-parent">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <div class="row">
+                <div class="col">
+                    <h1>Courses</h1>
+                </div>
+                <div class="col d-block d-sm-none text-right">
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarCoursesCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>  
+            <hr>
+            <div class="row">
+                <div class="navbar courses-sidenav col-12 col-sm-5 col-md-4 col-lg-3">
+                    <div class=" h-100 navbar-expand-sm">
+                        <div class=" collapse navbar-collapse" id="navbarCoursesCollapse">
+                            <ul class="courses-sidenav-ul" >
+                                <li [class.bold]="contentIndex==1" [routerLink]="['/courses/maths-english-booster']"
+                                    (click)="showContent(1)">Maths & English booster
+                                </li>
+                                <li [class.bold]="contentIndex==2" [routerLink]="['/courses/ks2-sats-course']"
+                                    (click)="showContent(2)">KS2 SATS Course
+                                </li>
+                                <li [class.bold]="contentIndex==3" [routerLink]="['/courses/gcse-math-tuition']"
+                                    (click)="showContent(3)">GCSE Maths Tuition</li>
+                                <li [class.bold]="contentIndex==4" [routerLink]="['/courses/ks3-math']"
+                                    (click)="showContent(4)">KS3 Maths/Years 7-9
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+                    <div class="drawer-content">
+
+                        <router-outlet></router-outlet>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

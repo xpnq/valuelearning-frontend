@@ -1,0 +1,95 @@
+
+.card-section-home {
+    padding-bottom: 4em;
+    cursor: pointer;
+  }
+  
+  .card{
+    height: 450px;
+    border: 1px solid #e2e2e5;
+  }
+  
+  .card:hover{
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    transition: transform .2s; /* Animation */
+    overflow: hidden;
+  }
+  
+  .card:hover .card-img-top{
+    transform: scale(1.01);
+  }
+
+  .card-img-top{
+    display:none;
+  }
+
+  .go {
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    transform:rotate(90deg);
+  }
+  .go img{
+    
+  }
+
+  .go:hover{
+    animation-name: spin;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+  }
+
+  .card-title{
+    padding: 70px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .card-text{
+    padding: 20px 50px;
+  }
+
+  .card{
+    padding: 0;
+    border-radius: 20%;
+    overflow: hidden;
+  }
+
+  .card-body{
+    padding: 0;
+  }
+
+  .background-blue {
+    background-color: #007cef;
+  }
+  
+  .background-red {
+    background-color: #EA4335;
+  } 
+  
+  .background-orange{
+    background-color:  #fdb301;
+  } 
+  
+  .background-grey {
+    background-color: #666666;
+  }
+  
+
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.parent{
+  margin-top: 6em;
+}

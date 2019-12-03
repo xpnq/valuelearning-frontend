@@ -1,0 +1,8 @@
+.progress-bar-dummy{
+    display: block;
+    height: 4px;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 250ms linear;
+    width: 100%;
+}

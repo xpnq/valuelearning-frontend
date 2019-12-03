@@ -1,0 +1,34 @@
+.contact-form {
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.full-width{
+    width: 100%;
+}
+
+.form-container{
+    width: 100%;
+}
+
+mat-form-field {
+    width:100%;
+}
+
+button:focus {
+    outline: none;
+ }
+
+.contact-form-parent, .contact-message-parent{
+    margin-top: 25px;
+}
+
+.write-to-us{
+    margin-top: 5px;
+}
+
+.parent{
+    margin-top: 6em;
+}

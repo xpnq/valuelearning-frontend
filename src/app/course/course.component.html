@@ -1,0 +1,37 @@
+<div class="container parent">
+    <div class="mat-tab-container">
+        <mat-tab-group>
+            <mat-tab label="Courses">
+                <mat-card class="elevenplus-mat-card">
+                    <mat-drawer-container class="example-container">
+                        <mat-drawer mode="side" opened>
+                            <div class="elevenplus-sidenav">
+                                <ul class="elevenplus-sidenav-ul">
+                                    <li [class.bold]="contentIndex==1" [routerLink]="['/courses/1']" (click)="showContent(1)">Maths & English booster
+                                    </li>
+                                    <li [class.bold]="contentIndex==2" [routerLink]="['/courses/2']" (click)="showContent(2)">KS2 SATS Course
+                                    </li>
+                                    <li [class.bold]="contentIndex==3" [routerLink]="['/courses/3']" (click)="showContent(3)">GCSE Maths Tuition</li>
+                                    <li [class.bold]="contentIndex==4" [routerLink]="['/courses/4']" (click)="showContent(4)">KS3 Maths/Years 7-9
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="drawer-button">
+
+                            </div>
+                        </mat-drawer>
+                        <mat-drawer-content>
+                            <div class="drawer-content" [ngSwitch]="contentIndex">
+
+
+
+                            </div>
+
+                        </mat-drawer-content>
+                    </mat-drawer-container>
+                </mat-card>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  background-color: rgb(27, 76, 29);
+  color: white;
+  position: absolute; 
+  bottom: 0px;
+}
+
+.footer-modals{
+  cursor: pointer;
+}
+
+a.footer-modals:hover{
+  text-decoration: underline;
+}
+
+.footer-copyright{
+  padding-bottom: 10px;
+}

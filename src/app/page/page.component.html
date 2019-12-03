@@ -1,0 +1,10 @@
+<div *ngIf="showProgressBar">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<div *ngIf="!showProgressBar">
+    <div class="progress-bar-dummy"></div>
+</div>
+<app-header (showProgress)="handleShowProgress($event)"></app-header>
+<app-banner [bannerHeight]=bannerHeight></app-banner>
+<app-main (currentRoute)="setCurrentRoute($event)" (showProgress)="handleShowProgress($event)"></app-main>
+<app-footer></app-footer>

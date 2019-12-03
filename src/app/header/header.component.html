@@ -1,0 +1,89 @@
+<app-header-menu></app-header-menu>
+<hr class="clearfix w-100 pb-0">
+<div class="header-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <nav class="navbar navbar-expand-sm navbar-light justify-content-center"  role="navigation">
+          <div class="container-fluid inner-container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+              data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse in" id="collapsibleNavbar">
+              <ul class="navbar-nav w-100 nav-justified">
+                <li [ngClass]="{'nav-item': true, 'dropdown': true,  'active': 'courses' === currentTab}">
+                  <a [routerLink]="['/courses']" (click)="currentTab='courses'" class="nav-link" data-toggle="dropdown">Courses</a>
+                  <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a [routerLink]="['/courses/maths-english-booster']">Maths & English Booster</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/courses/ks2-sats-course']">KS2 SATS Course</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/courses/gcse-math-tuition']">GCSE Maths Tuition</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/courses/ks3-math']">KS3 Maths/Years 7-9</a></li>
+                </ul>
+                </li>
+                <li [ngClass]="{'nav-item': true, 'dropdown': true,  'active': 'elevenplus' === currentTab}">
+                  <a [routerLink]="['/elevenplus']" (click)="currentTab='elevenplus'" class="nav-link" data-toggle="dropdown">11+</a>
+                  <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/pre-elevenplus-year-four']">Pre 11+ year4</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/elevenplus-year-five']">11+ year 5</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/independent-schools']">Independent Schools</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/elevenplus-mock-tests']">11+ Mock Tests</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/elevenplus-mock-test-faq']">11+ Mock Tests FAQ </a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/elevenplus-summer-course']">11+ Summer Course</a></li>
+                  <li class="dropdown-item"><a [routerLink]="['/elevenplus/elevenplus-advice']">11+ Advice</a></li>
+                </ul>
+                </li>
+                <li [ngClass]="{'nav-item': true, 'dropdown': true,  'active': 'parents' === currentTab}">
+                  <a [routerLink]="['/parents']" (click)="currentTab='parents'" class="nav-link" data-toggle="dropdown">Parents</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a [routerLink]="['/parents/how-to-enrol']">How to Enrol</a></li>
+                    <li class="dropdown-item"><a [routerLink]="['/parents/enrolment-form']">Enrolment Form </a></li>
+                    <li class="dropdown-item"><a [routerLink]="['/parents/testimonials']">Testimonials</a></li>
+                    <li class="dropdown-item"><a [routerLink]="['/parents/term-dates']">Term Dates 2018/19 </a></li>
+                  </ul>
+                </li>
+
+                <li [ngClass]="{'nav-item': true,  'active': 'consultancy' === currentTab}">
+                  <a [routerLink]="['/consultancy']" (click)="currentTab='consultancy'" class="nav-link" data-toggle="dropdown">Consultancy</a>
+                </li>
+
+                <li [ngClass]="{'nav-item': true, 'dropdown': true,  'active': 'shop' === currentTab}">
+                  <a [routerLink]="['/shop']" (click)="currentTab='shop'" class="nav-link" data-toggle="dropdown">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="#">11+ Mock Tests</a></li>
+                    <li class="dropdown-item"><a href="#">11+ Summer Course</a></li>
+                    <li class="dropdown-item"><a href="#">Online Tests</a></li>
+                    <li class="dropdown-item"><a href="#">Spelling test</a></li>
+                    <li class="dropdown-item"><a href="#">Mental Maths</a></li>
+                  </ul>
+                </li>
+                <li [ngClass]="{'nav-item': true,  'active': 'aboutus' === currentTab}">
+                  <a class="nav-link" (click)="currentTab='aboutus'" [routerLink]="['/about']">About&nbsp;Us</a>
+                </li>
+                <li [ngClass]="{'nav-item': true,  'active': 'contactus' === currentTab}">
+                  <a class="nav-link" (click)="currentTab='contactus'" [routerLink]="['/contact']">Contact&nbsp;Us</a>
+                </li>
+                <li [ngClass]="{'nav-item': true, 'dropdown': true, 'active': false}" *ngIf="userLoggedIn; else useEntrydetails">
+                  <a (click)="currentTab='account'" class="nav-link last-item" data-toggle="dropdown">My Account</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="#">Edit Profile</a></li>
+                    <li class="dropdown-item"><a href="#">Orders</a></li>
+                    <li class="dropdown-item"><a (click)="logout()">Logout</a></li>
+                  </ul>
+                </li>
+                <ng-template #useEntrydetails>
+                  <li [ngClass]="{'nav-item': true, 'dropdown': true, 'active': false}">
+                    <span class="nav-link last-item">
+                      <a class="login_entry" (click)="openDialog(0)">Login</a>/<a class="login_entry"
+                        (click)="openDialog(1)">Register</a>
+                    </span>
+                  </li>
+                </ng-template>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
